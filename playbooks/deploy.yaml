@@ -1,0 +1,11 @@
+# Deploy with a checked out git repo
+  - hosts: all
+    become: true
+    tasks:
+      - name: checkout app
+        git:
+          repo: 'git repo.git'
+          dest: '/path/to/app'
+      - name: install all requirements
+        pip:
+          requirements: '/path/to/requirements.txt'

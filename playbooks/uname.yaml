@@ -1,0 +1,6 @@
+# uname.yaml
+---
+  - hosts: webservers,loadbalancers
+    tasks:
+    - name: get uname
+      shell: "uname"

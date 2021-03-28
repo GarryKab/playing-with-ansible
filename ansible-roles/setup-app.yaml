@@ -1,0 +1,6 @@
+# Setup the app
+---
+  - hosts: webservers
+    become: true
+    roles:
+      - webservers

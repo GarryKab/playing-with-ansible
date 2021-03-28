@@ -1,0 +1,10 @@
+# Check status
+---
+  - hosts: webservers,loadbalancers
+    become: true
+    tasks:
+      - name: Check apache status
+        command: service httpd status
+        changed_when: false
+        args:
+          warn: no
